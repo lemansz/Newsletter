@@ -1,0 +1,1 @@
+Hello, I saw this challenge on Frontend mentor and completed it few weeks back. Then I had little knowledge about git/github but now I am better at it I decided to push this project to a repo and submit it to front-end mentor.

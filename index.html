@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <div class="container">
+
+       
+        
+        <div class="texts-area">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul>
+            <li>Product discovery and building what matters</li>
+            <br>
+            <li>Measuring to ensuring updates are a success</li>
+            <br>
+            <li>And much more</li>
+        </ul>
+        <form name="form" action="process.php" novalidate method="post" onsubmit="return(validate())" >
+            <div><p class="email-address">Email address</p><p id="error" class="error"></p></div>
+            <input type="email" id="email" name="email" class="email" placeholder="email@company.com" id="email" >
+        </label>
+            <br><br>
+            <button class="submit" type="submit" name="submit"><h3 class="btn"><h3>Subscribe to monthly newsletter</h3></button>
+        </form>
+        </div>
+       <div class="right-side"></div>
+    </div>
+
+    <script>
+        function validate(){
+            const emailInput = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (document.form.email.value == ""){
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').innerHTML = 'Email cannot be empty';
+                document.getElementById('email').style.backgroundColor = 'hsl(0, 100%, 94%)';
+                document.form.email.focus()
+                return false
+            }
+
+            if (!emailRegex.test(emailInput)){
+                document.getElementById('error').style.display = 'block';
+                document.getElementById('error').innerHTML = 'Valid email required';
+                document.getElementById('email').style.backgroundColor = 'hsl(0, 100%, 94%)';
+                document.form.email.focus()
+                return false
+            }
+
+        }
+
+    
+    </script>
+<body>
+</html>
