@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    body{
+    background-color: rgba(23, 30, 56, 0.899);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12.5rem;
+    overflow: hidden;
+   
+    }
+    .container{
+        background-color: whitesmoke;
+        height: 22rem;
+        width: 18.75rem;
+        border-radius: 1.25rem;
+        padding-left: 3.125rem;
+        padding-top: 1.875rem;
+        padding-right: 3.125rem;
+    }
+    button{
+        padding: 0.938rem;
+        text-align: center;
+        width: 18.75rem;
+        border-radius: 0.5rem;
+        border: none;
+        background-color:rgba(23, 30, 56, 0.899);
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+    }
+    button:hover{
+    cursor: pointer;
+    background: linear-gradient(to right , hsl(340, 75%, 63%), hsl(370, 100%, 65%));
+    box-shadow: 1px 8px 18px hsl(370, 100%, 85%) ;
+
+    }
+    p{ 
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+    @media screen and (max-width: 29.688rem) {
+        .container{
+            min-width: 100%;
+            border-radius: 0%;
+            height: fit-content;
+            
+        }
+        button{
+            margin-top: 100%;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="icon-list.svg" width="30px">
+        <h1>Thanks for subscribing!</h1>
+        <P>A confirmation email as been sent <b id="userEmail"></b>. Please open it and click the button to confirm your subcription </P>
+        <br>
+        <button>Dismiss message</button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        document.getElementById('userEmail').innerHTML = email;
+    </script>
+</body>
+</html>
